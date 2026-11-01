@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Help with MemoryMover: Snapchat exports, Photos permissions, dates, locations, overlays, downloads, one-time purchases and restoring access.">
+  <meta name="referrer" content="no-referrer">
+  <title>Support & FAQ — MemoryMover</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="index.html"><img src="icon.png" width="40" height="40" alt="">MemoryMover</a>
+    <nav aria-label="Main navigation"><a href="privacy.html">Privacy</a><a href="support.html" aria-current="page">Support</a><a href="ru/privacy.html" lang="ru">На русском</a></nav>
+  </div></header>
+  <main id="main" class="wrap document">
+    <p class="eyebrow">A little help with the move</p>
+    <h1>Support &amp; FAQ</h1>
+    <p class="lead">Start with your own Snapchat export. MemoryMover prepares your memories on your device and saves supported files to your photo library.</p>
+    <p>Need a hand? <a href="#contact">Contact support</a>. For data handling details, read our <a href="privacy.html">privacy policy</a>.</p>
+    <section aria-labelledby="faq-title"><h2 id="faq-title">Frequently asked questions</h2>
+      <details open><summary>How do I get started?</summary>
+        <p>Request your own Snapchat “Download My Data” export and include Memories. Download the export to your device, then choose its ZIP files or extracted folder in MemoryMover. If Snapchat provides several ZIP parts, select all relevant parts together. Keep your original export until you have checked the saved results.</p>
+        <p>The app reads supported HTML/JSON export indexes and can also find supported media bundled in the export. If the export contains download links instead of the media itself, an internet connection is needed.</p>
+      </details>
+      <details><summary>Do I sign in to Snapchat inside MemoryMover?</summary>
+        <p>No. There is no MemoryMover account and the app does not ask for your Snapchat password. You obtain your export from Snapchat separately, then select it in the system picker. Treat the export and its download links as private.</p>
+      </details>
+      <details><summary>Where will I find my saved memories?</summary>
+        <p>On iOS, open Photos and find the MemoryMover album. On Android, look for MemoryMover in your gallery; photos are stored in Pictures/MemoryMover and videos in Movies/MemoryMover, which some galleries display separately. The app’s gallery shortcut may open the gallery home rather than the album on some Android devices.</p>
+      </details>
+      <details><summary>Why does the app ask for Photos or media access?</summary>
+        <p>On iOS, full read/write Photos access is needed to create or reuse the named album and check earlier copies. Limited or add-only access cannot complete this album workflow. You can adjust access in your device settings.</p>
+        <p>On Android 10 and later, saving new app-owned media does not require broad read access. Read access helps check earlier saved copies, especially after reinstalling. Limited or denied access can prevent checking some earlier copies; review the app’s status before retrying uncertain saves.</p>
+      </details>
+      <details><summary>Are dates, GPS locations and captions preserved?</summary>
+        <p>The app writes available dates and GPS metadata from your export or supported source files. It does not request your device’s current location. Missing information cannot be recreated; dates without a timezone in the export are interpreted as UTC, and your gallery may display dates in your local timezone.</p>
+        <p>Supported separate photo overlays are combined with photos locally, including captions already present in those overlays. Captions already embedded in a supported video remain in the video. Separate video overlays are not supported. Invalid overlays, ambiguous media and unsupported formats are reported for review.</p>
+      </details>
+      <details><summary>Why did a download fail?</summary>
+        <p>Check your connection and available device storage, then use Resume. Expired or access-denied Snapchat links may require requesting a fresh export from Snapchat. The app only accepts HTTPS links on snapchat.com or its subdomains and checks every redirect; a link to a different domain is rejected. Do not send private links to support.</p>
+      </details>
+      <details><summary>Can I pause and continue later? Will it make duplicates?</summary>
+        <p>The app stores progress locally so you can pause and resume. It checks saved asset records when access allows. A save is marked complete only after the gallery confirms success and its asset identifier has been stored. If a result is uncertain or earlier copies cannot be checked, review the gallery and the app’s message before retrying. Duplicate prevention is limited by available permissions and records; reinstalling removes private progress.</p>
+      </details>
+      <details id="purchases"><summary>Is Unlimited a subscription? How do I restore it?</summary>
+        <p>No. The first 200 unique saves are free; Unlimited is an optional one-time, non-consumable purchase handled by Apple or Google. The store supplies the current price. There is no recurring subscription.</p>
+        <p>Use Restore in the app while signed in to the same store account used for the purchase. Check your connection and store account if the product is unavailable or a purchase is pending. Purchases belong to the relevant store; cross-platform transfer is not provided. Payment and refund requests are handled through Apple or Google.</p>
+      </details>
+      <details><summary>How do I delete my data?</summary>
+        <p>Delete the app to remove its private working files and progress; on iOS, offloading is not the same as deleting. Android also lets you clear the app’s storage in Settings. Delete saved photos and videos separately in Photos or your gallery, and remove the original export separately if desired. Removing an album alone may leave the media in your library. Check any cloud photo and file backups you use.</p>
+        <p>There is no MemoryMover account or server-side memory archive. To request deletion of a support email conversation, write to the contact address below.</p>
+      </details>
+      <details><summary>Does MemoryMover upload my memories or track me?</summary>
+        <p>No export or processed media is uploaded to us. Parsing and processing happen on your device. We add no developer analytics, advertising, tracking or automatic crash uploads to us. Media downloads connect directly to Snapchat’s allowed HTTPS hosts; store services handle product queries, purchases and restoration. Google Play Billing also includes Google’s own diagnostic logging transport. Those providers receive the requests needed to deliver their services. Your own photo-library or file-provider sync settings may also apply. See the <a href="privacy.html#network">network explanation</a>.</p>
+      </details>
+      <details><summary>Is this an official Snapchat app?</summary>
+        <p>No. MemoryMover is independent and is not affiliated with, endorsed by or sponsored by Snap Inc. Snapchat is a trademark of Snap Inc.</p>
+      </details>
+    </section>
+    <section class="contact" id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Contact support</h2>
+      <p><a href="mailto:lalishka984@gmail.com">lalishka984@gmail.com</a></p>
+      <p>Tell us your device model, iOS or Android version, app version, the step that failed and the error message. Describe whether you selected ZIP files or a folder. If you include a screenshot, hide personal information first.</p>
+      <p><strong>Please do not send your export, private download links, account credentials, payment details or personal photos and videos.</strong> Sending an email shares your address and message with support and email providers; the app does not send this information automatically.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap"><div class="footer-links"><a href="index.html">MemoryMover home</a><a href="privacy.html">Privacy policy</a><a href="ru/privacy.html" lang="ru">Конфиденциальность</a></div><p>MemoryMover is not affiliated with Snap Inc.</p></div></footer>
+</body>
+</html>

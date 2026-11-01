@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MemoryMover privacy policy: on-device export processing, photo library permissions, direct Snapchat downloads and store purchases.">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy Policy — MemoryMover</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="alternate" hreflang="ru" href="ru/privacy.html">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="index.html"><img src="icon.png" width="40" height="40" alt="">MemoryMover</a>
+    <nav aria-label="Main navigation"><a href="privacy.html" aria-current="page">Privacy</a><a href="support.html">Support</a><a href="ru/privacy.html" lang="ru">На русском</a></nav>
+  </div></header>
+  <main id="main" class="wrap document">
+    <p class="eyebrow">Your memories stay yours</p>
+    <h1>Privacy Policy</h1>
+    <p class="date">Effective date: <time datetime="2026-11-01">November 1, 2026</time></p>
+    <p class="lead">MemoryMover processes your Snapchat export on your device. We do not collect your export, photos, videos, captions or location, and we do not operate a server that receives them.</p>
+    <p>This policy explains the MemoryMover mobile app, this static support site and what happens if you choose to contact us. Privacy contact: <a href="mailto:lalishka984@gmail.com">lalishka984@gmail.com</a>.</p>
+    <nav class="toc" aria-label="On this page"><strong>On this page</strong><ul>
+      <li><a href="#processing">What the app does on your device</a></li><li><a href="#network">Downloads and purchases</a></li><li><a href="#permissions">Permissions</a></li><li><a href="#storage">Storage and deletion</a></li><li><a href="#support">Support and this website</a></li><li><a href="#children">Children, changes and contact</a></li>
+    </ul></nav>
+    <section id="processing"><h2>1. What the app does on your device</h2>
+      <p>You choose your own Snapchat “Download My Data” export using the system file or folder picker. MemoryMover reads that export, prepares supported photos and videos, and saves copies to the device photo library in an album named <strong>MemoryMover</strong>. On Android, photos and videos are written to Pictures/MemoryMover and Movies/MemoryMover; your gallery may display these as separate folders.</p>
+      <p>Export parsing, metadata processing, photo overlay composition and transfer recovery all happen on the device. The app preserves dates and available GPS coordinates from supported export or source metadata. It does not determine your device’s current location. Supported separate photo overlays, including captions contained in those overlays, are combined locally. Separate video overlays and ambiguous or unsupported media are reported rather than silently discarded.</p>
+      <p>You do not need a MemoryMover account or provide a Snapchat password to the app. We do not add developer analytics, advertising SDKs, tracking, or automatic crash-report uploads to us. We do not sell or share your personal data, and the app does not send your export or processed media to us. Store services have their own data handling, as explained below.</p>
+    </section>
+    <section id="network"><h2>2. Downloads and purchases</h2>
+      <p><strong>Direct Snapchat downloads.</strong> If a media file is not already available locally, the app requests it directly from the supported link in your own export. Requests go to Snapchat’s HTTPS download hosts under <code>snapchat.com</code>, including its subdomains, without a MemoryMover proxy or server. Every redirect is checked against the same restriction. Hosts outside that domain are rejected, even if a link points to another CDN domain.</p>
+      <p>Those links can contain private access credentials. To retrieve a file, the app necessarily sends its link to the Snapchat host, which also receives normal connection information such as your IP address. Snap handles those requests under its own policies; we cannot control its server logs. This is a download from Snap, not an upload of your export, gallery or GPS metadata to MemoryMover.</p>
+      <p><strong>One-time purchase.</strong> Optional Unlimited access is a one-time, non-consumable purchase through the App Store or Google Play, not a subscription. The app contacts the store to load product information and to buy, restore or complete a purchase. Apple or Google handles the store account, payment and transaction processing under its own terms. We do not receive your payment card details. The app receives purchase-status events and stores the product identifier and an unlocked-status flag locally; it does not send receipts to a developer server.</p>
+      <p>Google Play Billing on Android also includes Google’s diagnostic logging transport. It can send billing-related diagnostic events to Google as part of the store SDK’s operation. This is separate from MemoryMover’s export processing; we do not receive that diagnostic stream. We do not claim that the store SDK makes no network requests or collects no technical information.</p>
+      <p>App network activity consists of direct media downloads and store services, including the store SDK’s diagnostics. Apple, Google and Snap operate their own services independently of MemoryMover.</p>
+    </section>
+    <section id="permissions"><h2>3. Permissions and access</h2>
+      <ul>
+        <li><strong>Photos on iOS:</strong> the app declares access to add photos and access to the photo library. Its current album workflow requests full read/write Photos access to create or reuse the MemoryMover album and check earlier saved copies. Limited or add-only access is insufficient for this workflow. You can change access in Settings.</li>
+        <li><strong>Photos and videos on Android:</strong> the app declares read access for images and videos, selected-media access on Android 14 and later, and legacy storage read access through Android 12L. Reading is used to check earlier copies, including after reinstallation. On supported Android versions (Android 10 and later), saving the app’s own new media does not require broad library read access. With limited access, some earlier copies cannot be checked.</li>
+        <li><strong>Files:</strong> the system picker grants access to the export files or folder you select. Choosing a cloud-backed file can cause your file provider to download it under that provider’s policies.</li>
+        <li><strong>Android network and billing:</strong> Internet access enables media downloads and store services. The dependency-merged manifest also declares network-state access, Google Play billing, and an app-specific signature permission that protects internal broadcast receivers. These are not permissions to read your location or contacts.</li>
+      </ul>
+      <p>The mobile app does not declare camera, microphone, contacts, device-location or advertising-ID permissions. GPS metadata comes from your export or supported media, not a location sensor.</p>
+    </section>
+    <section id="storage"><h2>4. Local storage, retention and deletion</h2>
+      <p>The app keeps working copies, downloads, prepared media and transfer records in private app storage. Transfer records may include export download links, dates, GPS metadata, local file paths, saved asset identifiers and progress. A local save counter and purchase-unlock state are also retained. These records allow resuming transfers and checking previous saves; they are not transmitted to us. Some completed import folders are cleaned up, but the app does not promise to remove every working file immediately after a transfer.</p>
+      <p>To remove private app data, delete the app (not merely offload it on iOS), or clear its app storage on Android. This also removes local progress and unlock state; a store purchase can be restored through the same store account. Original exports and copies saved to Photos or the gallery remain until you delete them separately. Deleting an album alone may not delete its photos and videos.</p>
+      <p>The app excludes its private working storage from iOS backup and disables Android app backup and transfer in its configuration. Your photo library, original export and file provider may still sync or back up through services you have enabled, such as iCloud Photos or Google Photos. Those services follow your device settings and their own policies. Saved media may include GPS coordinates; consider this before sharing it yourself.</p>
+      <p>There is no MemoryMover account or server-side copy of your memories for us to delete.</p>
+    </section>
+    <section id="support"><h2>5. Support email and this website</h2>
+      <p>If you email <a href="mailto:lalishka984@gmail.com">lalishka984@gmail.com</a>, we receive your email address and anything you choose to send so we can respond to your request. This voluntary correspondence is separate from the app, which does not automatically send support data. Email providers, including Gmail, process correspondence under their own policies. Please do not send exports, private download links, passwords, payment details or unredacted personal media. You can ask us to delete support correspondence using the same address.</p>
+      <p>This website consists of static HTML, a local stylesheet and a local app icon. It contains no scripts, external fonts, analytics, advertising, tracking pixels, cookies or browser-storage code. When hosted, the hosting provider necessarily receives web requests, including connection information such as an IP address, and may keep access logs under its own policies. Opening an email link uses your email application.</p>
+    </section>
+    <section id="children"><h2>6. Children</h2>
+      <p>MemoryMover is not directed to children under 13. We do not knowingly collect personal information from children through the app. If you believe a child has sent personal information to our support address, contact us so we can address it.</p>
+      <h2>7. Changes to this policy</h2>
+      <p>We will update this page and its effective date if our privacy practices change.</p>
+      <h2>8. Contact and independence</h2>
+      <p>For privacy questions or support, email <a href="mailto:lalishka984@gmail.com">lalishka984@gmail.com</a> or visit <a href="support.html">Support</a>.</p>
+      <p>MemoryMover is not affiliated with, endorsed by or sponsored by Snap Inc. Snapchat is a trademark of Snap Inc.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap"><div class="footer-links"><a href="index.html">MemoryMover home</a><a href="support.html">Support</a><a href="ru/privacy.html" lang="ru">Политика на русском</a></div><p>Effective November 1, 2026.</p></div></footer>
+</body>
+</html>

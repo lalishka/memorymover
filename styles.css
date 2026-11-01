@@ -1,0 +1,75 @@
+:root {
+  color-scheme: light;
+  --ink: #171717;
+  --muted: #555653;
+  --paper: #fffef9;
+  --line: #deded6;
+  --yellow: #ffd60a;
+  --blue: #293dc7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.7;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: var(--blue); text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+.skip-link { position: absolute; left: 1rem; top: -6rem; padding: .6rem 1rem; background: var(--yellow); z-index: 1; }
+.skip-link:focus { top: 1rem; }
+.wrap { width: min(100% - 2.5rem, 66rem); margin-inline: auto; }
+.site-header { border-bottom: 1px solid var(--line); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem 2rem; padding-block: 1rem; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; font-size: 1.12rem; font-weight: 750; color: var(--ink); text-decoration: none; }
+.brand img { border-radius: .6rem; }
+nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+nav a { padding-block: .5rem; }
+nav a[aria-current="page"] { color: var(--ink); font-weight: 700; }
+main { padding-block: 3.5rem 4.5rem; }
+h1, h2, h3 { line-height: 1.18; letter-spacing: -.035em; text-wrap: balance; overflow-wrap: anywhere; }
+h1 { font-size: clamp(2.4rem, 6vw, 4.8rem); margin: .5rem 0 1.5rem; }
+h2 { font-size: clamp(1.45rem, 3vw, 1.9rem); margin: 2.5rem 0 1rem; }
+p { margin: 0 0 1.2rem; }
+li { margin-bottom: .65rem; }
+.eyebrow { text-transform: uppercase; font-size: .78rem; font-weight: 750; letter-spacing: .12em; color: var(--muted); }
+.lead { font-size: 1.2rem; line-height: 1.65; max-width: 40rem; }
+.muted, .date { color: var(--muted); }
+.hero { display: grid; grid-template-columns: 1fr 16rem; gap: 3rem; align-items: center; }
+.hero-icon { display: block; width: 100%; height: auto; border-radius: 2.5rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+.button { display: inline-block; padding: .8rem 1.25rem; border: 1px solid var(--ink); border-radius: .5rem; color: var(--ink); text-decoration: none; font-weight: 700; background: var(--yellow); }
+.button.secondary { background: transparent; }
+.note { border-left: 4px solid var(--yellow); padding: 1.1rem 1.4rem; background: #f4f3ec; margin-block: 2rem; }
+.note p:last-child { margin-bottom: 0; }
+.steps { padding-left: 1.5rem; max-width: 45rem; }
+.document { max-width: 48rem; }
+.document h1 { font-size: clamp(2.25rem, 6vw, 3.5rem); }
+.document section { scroll-margin-top: 1.5rem; }
+.toc { display: block; padding: 1.25rem 1.5rem; border: 1px solid var(--line); border-radius: .5rem; margin-block: 2rem; }
+.toc ul { margin: .5rem 0 0; padding-left: 1.25rem; }
+.toc li { margin-bottom: .25rem; }
+details { border-bottom: 1px solid var(--line); padding-block: 1.25rem; }
+summary { font-weight: 700; cursor: pointer; font-size: 1.1rem; line-height: 1.5; }
+details p:first-of-type { margin-top: 1rem; }
+details p:last-child { margin-bottom: 0; }
+.contact { margin-top: 2.5rem; padding: 1.5rem; border: 1px solid var(--line); border-radius: .5rem; }
+.contact h2 { margin-top: 0; }
+.site-footer { border-top: 1px solid var(--line); padding-block: 1.75rem; font-size: .9rem; color: var(--muted); }
+.footer-links { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-bottom: 1rem; }
+.site-footer p { margin-bottom: .5rem; }
+@media (max-width: 640px) {
+  main { padding-block: 2.5rem 3rem; }
+  .hero { grid-template-columns: 1fr; gap: 1.75rem; }
+  .hero-icon { width: 7rem; border-radius: 1.25rem; grid-row: 1; }
+  .wrap { width: min(100% - 2rem, 66rem); }
+  .lead { font-size: 1.1rem; }
+  .note { padding: 1rem; }
+}
+@media print {
+  .site-header, .site-footer, .skip-link, .toc, .actions { display: none; }
+  :root { background: white; color: black; }
+  main { padding-block: 0; }
+  .wrap, .document { width: 100%; max-width: none; }
+  details::details-content { content-visibility: visible; }
+}
